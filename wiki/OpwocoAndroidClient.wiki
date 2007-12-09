@@ -2,7 +2,7 @@ This page will document requirements, use cases, and design of the Android OpWoC
 
 = Introduction =
 
-The OpWoCo Android application is a Google mobile phone application that will allow its users to access valuable product information on demand. Using a simple EAN, UPC, or OpWoCode id of a product, users can instantaneously access descriptions, reviews, prices, and vendor information of any given product.
+The OpWoCo Android application is a Google mobile phone application that will allow its users to access valuable product information on demand. Using a simple EAN, UPC, or OpWoCo id of a product, users can instantaneously access descriptions, reviews, prices, and vendor information of any given product.
 
 = Requirements =
 
