@@ -1,9 +1,8 @@
-#summary One-sentence summary of this page.
+This page will document requirements, use cases, and design of the Android OpWoCo client.
 
 = Introduction =
 
-This page will document requirements, use cases, and design of the Android OpWoCo client.
-
+The OpWoCo Android application is a Google mobile phone application that will allow its users to access valuable product information on demand. Using a simple EAN, UPC, or OpWoCode id of a product, users can instantaneously access descriptions, reviews, prices, and vendor information of any given product.
 
 = Requirements =
 
@@ -17,6 +16,7 @@ This page will document requirements, use cases, and design of the Android OpWoC
 || R7 || The client will allow an identified product to be looked up on wikipedia for more information (i.e. as an http URI intent to the web browser?) || P1 ||
 || R8 || If location information is available of different vendors that sell the identified product, the client will display a map to all the vendors based on the geo location of the phone || P2 ||
 || R9 || The client will display all necessary help information to help users with its use || P1 ||
+|| R10 || The client will allow users to lookup a code based on a product's name, vendor, or description || P1 ||
 
 = Use Cases =
 
