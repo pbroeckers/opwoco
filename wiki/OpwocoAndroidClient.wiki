@@ -14,7 +14,7 @@ The OpWoCo Android application is a Google mobile phone application that will al
 || R5 || The client will display comments and reviews on identified product. It will also allow users to add their own reviews and comments || P1 ||
 || R6 || The client shall allow other Android applications to send it codes for lookup (i.e. register an OpWoCo intent with the system) || P1 ||
 || R7 || The client will allow an identified product to be looked up on wikipedia for more information (i.e. as an http URI intent to the web browser?) || P1 ||
-|| R8 || If location information is available of different vendors that sell the identified product, the client will display a map to all the vendors based on the geo location of the phone || P2 ||
+|| R8 || If location information is available of different vendors that sell the identified product, the client will display a map to all the vendors based on the geo location of the client || P2 ||
 || R9 || The client will display all necessary help information to help users with its use || P1 ||
 || R10 || The client will allow users to lookup a code based on a product's name, vendor, or description || P1 ||
 
