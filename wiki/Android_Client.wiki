@@ -8,7 +8,7 @@ The OpWoCo Android application is a Google mobile phone application that will al
 = Requirements =
 
 || *Number* || *Description* || *Priority* (P1/Highest - P3/Lowest) ||
-|| R1 || The client shall lookup EAN/UPC/OpWoCode codes for product identification || P1 ||
+|| R1 || The client shall lookup EAN/UPC/OpWoCo codes for product identification || P1 ||
 || R2 || The client will allow identified products to be bookmarked for future reference. Bookmarked products can be emailed as a list or sent via SMS/XMPP || P1 ||
 || R3 || The client will allow a captured photo of a barcode as an input to the system || P1 ||
 || R4 || The client will display a price comparison/lookup of an identified product || P1 ||
