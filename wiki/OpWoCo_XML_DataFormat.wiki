@@ -1,0 +1,9 @@
+#labels xml,Phase-Design
+= About this page =
+This page will descibe the DataFormat of sending request to the opwoco Server and getting data back from opwoco. 
+
+
+= XML Data Request (Client -> opwoco.net) =
+
+
+= XML Data Answer (opwoco.net -> Client) =
