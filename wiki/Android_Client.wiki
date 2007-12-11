@@ -19,6 +19,7 @@ The OpWoCo Android application is a Google mobile phone application that will al
 || R9 || The client will display all necessary help information to help users with its use || P1 ||
 || R10 || The client will allow users to lookup a code based on a product's name, vendor, or description || P1 ||
 
+
 = Use Cases =
 
 TBD.
