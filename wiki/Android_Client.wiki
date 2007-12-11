@@ -1,5 +1,5 @@
 #summary This page documents requirements, use cases, and the design of the Android OpWoCo client.
-#labels Phase-Requirements,Phase-Design
+#labels android,client,requirements,screenshots,design
 
 = Introduction =
 
