@@ -30,4 +30,4 @@ TDB.
 
 = Screenshots =
 
-http://opwoco.googlecode.com/files/AndroidCapture.png
+|| http://opwoco.googlecode.com/files/AndroidCapture.png || http://opwoco.googlecode.com/files/AndroidCapture2.png ||
