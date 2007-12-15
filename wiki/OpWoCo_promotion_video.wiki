@@ -1,0 +1,10 @@
+#summary promotion video for opwoco
+#labels Phase-Design
+
+= Story 1 =
+A children asks his mother "what is this mom" - standing at a POI.
+The mother looks like she doesn't know it. The dad use his mobile phone
+and scans an OpWoCo Code at the POI and is proud to inform the child about the POI.
+
+After that a promo-sentence like this:
+"The information must be there where you just are. It can. OpWoCo"
