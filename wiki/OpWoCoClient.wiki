@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary This section will contain the use case/uml daigrams plus design of the Java desktop client for OpWoco
 
 = Introduction =
 
