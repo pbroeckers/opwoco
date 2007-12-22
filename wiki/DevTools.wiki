@@ -1,5 +1,5 @@
+#summary developer just look here for dev-tools
 #labels Phase-Implementation
-#developer just look here for dev-tools
 
 = SVN =
 
@@ -15,4 +15,3 @@ http://rapidsvn.org/download/release/0.9.4/
 
 = Web-Services =
 * developed in PHP, currently no special dev tool.
-
