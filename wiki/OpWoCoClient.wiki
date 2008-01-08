@@ -1,13 +1,11 @@
-#summary This section will contain the use case/uml daigrams plus design of the Java desktop client for OpWoco
+#summary This section will contain the use case/uml diagrams plus design of the Java desktop client for OpWoco
+#labels Phase-Requirements
 
 = Introduction =
 
-Add your content here.
+OpWoCo Desktop Client is an application that will allow users to take photos of bar codes from their Webcam and enter your OpWoCo Code. You will be able to leave reviews and be able to read other peoples reviews on a specific product. 
+
+
 
 
 = Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
