@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsclientconfig serviceType="class" version="1.0">
+    <client>
+        <project>opwoco_Client</project>
+        <class location="${src.dir}" type="MySOAP_Client"/>
+        <property name="DataBinding" value="false"/>
+        <property name="floatingPoint" value="true"/>
+        <property name="createStubs" value="true"/>
+    </client>
+    <server>
+        <project path="">opwoco_web</project>
+        <class location="${src.dir}" mapping="" type="opwoco_webservice.WebToMobileServlet"/>
+    </server>
+    <services>
+        <service>
+            <class type="opwoco_webservice.opwoco_webserviceImpl">
+                <method name="checkLogin">
+                    <return type="java.lang.String"/>
+                    <param name="username" type="java.lang.String"/>
+                    <param name="password" type="java.lang.String"/>
+                </method>
+                <method name="connectDB">
+                    <return type="void"/>
+                </method>
+            </class>
+        </service>
+    </services>
+</wsclientconfig>
