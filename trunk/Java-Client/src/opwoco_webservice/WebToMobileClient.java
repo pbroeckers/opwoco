@@ -67,6 +67,16 @@ public class WebToMobileClient {
         return (Boolean)invokeServer(1, params, paramIDs);
     }
     
+    public String getProductInfo(String aProductCode) throws IOException {
+        Object params[] = new Object[] {
+            (String)aProductCode
+        };
+        int paramIDs[] = new int[] {
+            5
+        };
+        return (String)invokeServer(3, params, paramIDs);
+    }
+    
     
     /**
      *  This method performes a dynamic invocation on the server. It is generic in
