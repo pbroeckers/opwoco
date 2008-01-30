@@ -2,7 +2,7 @@
 <wsclientconfig serviceType="class" version="1.0">
     <client>
         <project>opwoco_Client</project>
-        <class location="${src.dir}" type="MySOAP_Client"/>
+        <class location="${src.dir}" type="opwoco_webservice.WebToMobileClient"/>
         <property name="DataBinding" value="false"/>
         <property name="floatingPoint" value="true"/>
         <property name="createStubs" value="true"/>
@@ -15,12 +15,9 @@
         <service>
             <class type="opwoco_webservice.opwoco_webserviceImpl">
                 <method name="checkLogin">
-                    <return type="java.lang.String"/>
+                    <return type="java.lang.Boolean"/>
                     <param name="username" type="java.lang.String"/>
                     <param name="password" type="java.lang.String"/>
-                </method>
-                <method name="connectDB">
-                    <return type="void"/>
                 </method>
             </class>
         </service>

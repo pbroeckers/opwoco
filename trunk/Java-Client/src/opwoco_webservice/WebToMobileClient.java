@@ -2,6 +2,7 @@
 /**
  * This file is generated. Please do not change
  */
+package opwoco_webservice;
 
 import java.util.*;
 import java.io.*;
@@ -29,7 +30,7 @@ public class WebToMobileClient {
      * and initializes the URL to the servlet gateway from a hard-coded value.
      */
     public WebToMobileClient() {
-        this("http://localhost:8080/opwoco_webservice/servlet/opwoco_webservice.WebToMobileServlet");
+        this("http://localhost:8080/opwoco_web/servlet/opwoco_webservice.WebToMobileServlet");
     }
     
     /**
@@ -42,20 +43,16 @@ public class WebToMobileClient {
         this.serverURL = serverURL;
     }
     
-    public String doLogin(String username, String password) throws IOException {
+    public Boolean checkLogin(String username, String password) throws IOException {
         Object params[] = new Object[] {
             (String)username,
             (String)password
         };
         int paramIDs[] = new int[] {
-            6,
-            6
+            5,
+            5
         };
-        return (String)invokeServer(2, params, paramIDs);
-    }
-    
-    public String getLatestVersion() throws IOException {
-        return (String)invokeServer(1, _, null);
+        return (Boolean)invokeServer(1, params, paramIDs);
     }
     
     
@@ -146,9 +143,9 @@ public class WebToMobileClient {
             return;
         }
         switch( id ) {
-            case 6:
+            case 5:
                 // String
-                out.writeShort(6);
+                out.writeShort(5);
                 out.writeUTF((String)o);
                 break;
             default:
@@ -161,9 +158,9 @@ public class WebToMobileClient {
         int type = in.readShort();
         Object result;
         switch (type) {
-            case 6:
-                // String
-                result = in.readUTF();
+            case 3:
+                // Boolean
+                result = new Boolean(in.readBoolean());
                 return result;
             case -1: /* NULL */
                 return null;
