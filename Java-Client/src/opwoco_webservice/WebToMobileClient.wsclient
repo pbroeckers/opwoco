@@ -24,6 +24,10 @@
                     <param name="code" type="java.lang.String"/>
                     <param name="userid" type="java.lang.String"/>
                 </method>
+                <method name="getProductInfo">
+                    <return type="java.lang.String"/>
+                    <param name="aProductCode" type="java.lang.String"/>
+                </method>
             </class>
         </service>
     </services>
