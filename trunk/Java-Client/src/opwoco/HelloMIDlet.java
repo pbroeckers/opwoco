@@ -660,6 +660,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
         }
         waitScreen.setText("login failed for User  "+loginScreen.getUsername() );
         // deze sleep voert die niet uit :(
+        // test cf
         Thread.sleep(2*1000); // 1* for 1 second...
         throw new Exception("niet gelukt");
     }
