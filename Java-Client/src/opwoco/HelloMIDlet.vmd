@@ -88,6 +88,11 @@
                     <Property name="label" typeID="Pjava.lang.String" value="VBack"/>
                     <Property name="type" typeID="Pint" value="V2"/>
                 </Component>
+                <Component componentID="80" typeID="Cjavax.microedition.lcdui.Command">
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="VokCommand"/>
+                    <Property name="label" typeID="Pjava.lang.String" value="VOk"/>
+                    <Property name="type" typeID="Pint" value="V4"/>
+                </Component>
             </Component>
             <Component componentID="10" typeID="C#DisplayablesCategory">
                 <Component componentID="14" typeID="Cjavax.microedition.lcdui.Form">
@@ -214,13 +219,13 @@
                     </Component>
                 </Component>
                 <Component componentID="50" typeID="Cjavax.microedition.lcdui.Form">
-                    <Property name="instanceName" typeID="Pjava.lang.String" value="VloginOK"/>
-                    <Property name="commands" typeID="1C#CommandEventSource" value="A1:3_R78"/>
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="VBookmarkProduct"/>
+                    <Property name="commands" typeID="1C#CommandEventSource" value="A2:3_R783_R81"/>
                     <Property name="title" typeID="Pjava.lang.String" value="VOpWoCo - Welcome"/>
                     <Property name="commandListener" typeID="C#CommandListener" value="R7"/>
                     <Property name="items" typeID="1Cjavax.microedition.lcdui.Item" value="A1:3_R53"/>
                     <Component componentID="53" typeID="Cjavax.microedition.lcdui.TextField">
-                        <Property name="instanceName" typeID="Pjava.lang.String" value="VtextField"/>
+                        <Property name="instanceName" typeID="Pjava.lang.String" value="VtxtProductCode"/>
                         <Property name="label" typeID="Pjava.lang.String" value="VEnter product code to bookmark"/>
                         <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R17"/>
                         <Property name="maxSize" typeID="Pint" value="V32"/>
@@ -233,6 +238,15 @@
                         <Component componentID="79" typeID="C#SwitchDisplayableEventHandler">
                             <Property name="eventSource" typeID="C#EventSource" value="R78"/>
                             <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R14"/>
+                        </Component>
+                    </Component>
+                    <Component componentID="81" typeID="C#CommandEventSource">
+                        <Property name="eventHandler" typeID="C#EventHandler" value="R86"/>
+                        <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R50"/>
+                        <Property name="command" typeID="Cjavax.microedition.lcdui.Command" value="R80"/>
+                        <Component componentID="86" typeID="C#SwitchDisplayableEventHandler">
+                            <Property name="eventSource" typeID="C#EventSource" value="R81"/>
+                            <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R82"/>
                         </Component>
                     </Component>
                 </Component>
@@ -285,6 +299,32 @@
                         </Component>
                     </Component>
                 </Component>
+                <Component componentID="82" typeID="Corg.netbeans.microedition.lcdui.WaitScreen">
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="VsaveIT_and_wait_screen"/>
+                    <Property name="commands" typeID="1C#CommandEventSource" value="A2:3_R833_R84"/>
+                    <Property name="title" typeID="Pjava.lang.String" value="VSaving product code"/>
+                    <Property name="commandListener" typeID="C#CommandListener" value="R7"/>
+                    <Property name="text" typeID="Pjava.lang.String" value="Vopwoco is saving the product code. You van find it at your personal account at www.opwoco.net"/>
+                    <Property name="task" typeID="Corg.netbeans.microedition.util.CancellableTask" value="R85"/>
+                    <Component componentID="84" typeID="C#WaitScreenFailureCommandEventSource">
+                        <Property name="eventHandler" typeID="C#EventHandler" value="R88"/>
+                        <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R82"/>
+                        <Property name="command" typeID="Cjavax.microedition.lcdui.Command" value="R46"/>
+                        <Component componentID="88" typeID="C#SwitchDisplayableEventHandler">
+                            <Property name="eventSource" typeID="C#EventSource" value="R84"/>
+                            <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R50"/>
+                        </Component>
+                    </Component>
+                    <Component componentID="83" typeID="C#WaitScreenSuccessCommandEventSource">
+                        <Property name="eventHandler" typeID="C#EventHandler" value="R87"/>
+                        <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R82"/>
+                        <Property name="command" typeID="Cjavax.microedition.lcdui.Command" value="R45"/>
+                        <Component componentID="87" typeID="C#SwitchDisplayableEventHandler">
+                            <Property name="eventSource" typeID="C#EventSource" value="R83"/>
+                            <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R50"/>
+                        </Component>
+                    </Component>
+                </Component>
             </Component>
             <Component componentID="13" typeID="C#ResourcesCategory">
                 <Component componentID="27" typeID="Cjavax.microedition.lcdui.Image">
@@ -298,17 +338,21 @@
                 <Component componentID="49" typeID="Corg.netbeans.microedition.util.SimpleCancellableTask">
                     <Property name="instanceName" typeID="Pjava.lang.String" value="Vtask"/>
                 </Component>
+                <Component componentID="85" typeID="Corg.netbeans.microedition.util.SimpleCancellableTask">
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="Vtask1"/>
+                </Component>
             </Component>
         </Component>
     </Document>
     <FlowScene version="1">
+        <Node componentID="44" descriptorID="componentNode44" x="418" y="265"/>
         <Node componentID="28" descriptorID="componentNode28" x="316" y="54"/>
-        <Node componentID="56" descriptorID="componentNode56" x="39" y="367"/>
+        <Node componentID="60" descriptorID="componentNode60" x="273" y="338"/>
         <Node componentID="33" descriptorID="componentNode33" x="529" y="76"/>
+        <Node componentID="56" descriptorID="componentNode56" x="39" y="367"/>
+        <Node componentID="82" descriptorID="componentNode82" x="695" y="269"/>
         <Node componentID="14" descriptorID="componentNode14" x="135" y="167"/>
         <Node componentID="50" descriptorID="componentNode50" x="597" y="397"/>
-        <Node componentID="44" descriptorID="componentNode44" x="418" y="265"/>
-        <Node componentID="60" descriptorID="componentNode60" x="273" y="338"/>
         <Node componentID="2" descriptorID="componentNode2" x="24" y="26"/>
     </FlowScene>
 </VisualDesign>

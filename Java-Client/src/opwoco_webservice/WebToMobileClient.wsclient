@@ -19,6 +19,11 @@
                     <param name="username" type="java.lang.String"/>
                     <param name="password" type="java.lang.String"/>
                 </method>
+                <method name="bookmarkCode">
+                    <return type="java.lang.String"/>
+                    <param name="code" type="java.lang.String"/>
+                    <param name="userid" type="java.lang.String"/>
+                </method>
             </class>
         </service>
     </services>

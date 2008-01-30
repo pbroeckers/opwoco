@@ -42,21 +42,24 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     private Command backCommand1;
     private Command backCommand3;
     private Command backCommand2;
+    private Command okCommand;
     private Form mainForm;
     private StringItem stringItem;
     private SplashScreen splashScreen;
     private LoginScreen loginScreen;
     private WaitScreen waitScreen;
-    private Form loginOK;
-    private TextField textField;
+    private Form BookmarkProduct;
+    private TextField txtProductCode;
     private Form UpdateForm;
     private Form About;
     private StringItem stringItem3;
     private StringItem stringItem4;
     private StringItem stringItem1;
+    private WaitScreen saveIT_and_wait_screen;
     private Image image2;
     private SimpleTableModel tableModel1;
     private SimpleCancellableTask task;
+    private SimpleCancellableTask task1;
     //</editor-fold>//GEN-END:|fields|0|
 
     /**
@@ -133,67 +136,81 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
                 // write pre-action user code here
                 switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|2|75-postAction
                 // write post-action user code here
-            }//GEN-BEGIN:|7-commandAction|3|72-preAction
+            }//GEN-BEGIN:|7-commandAction|3|78-preAction
+        } else if (displayable == BookmarkProduct) {
+            if (command == backCommand3) {//GEN-END:|7-commandAction|3|78-preAction
+                // write pre-action user code here
+                switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|4|78-postAction
+                // write post-action user code here
+            } else if (command == okCommand) {//GEN-LINE:|7-commandAction|5|81-preAction
+                // write pre-action user code here
+                switchDisplayable(null, getSaveIT_and_wait_screen());//GEN-LINE:|7-commandAction|6|81-postAction
+                // write post-action user code here
+            }//GEN-BEGIN:|7-commandAction|7|72-preAction
         } else if (displayable == UpdateForm) {
-            if (command == backCommand1) {//GEN-END:|7-commandAction|3|72-preAction
+            if (command == backCommand1) {//GEN-END:|7-commandAction|7|72-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|4|72-postAction
+                switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|8|72-postAction
                 // write post-action user code here
-            }//GEN-BEGIN:|7-commandAction|5|78-preAction
-        } else if (displayable == loginOK) {
-            if (command == backCommand3) {//GEN-END:|7-commandAction|5|78-preAction
-                // write pre-action user code here
-                switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|6|78-postAction
-                // write post-action user code here
-            }//GEN-BEGIN:|7-commandAction|7|35-preAction
+            }//GEN-BEGIN:|7-commandAction|9|35-preAction
         } else if (displayable == loginScreen) {
-            if (command == LoginScreen.LOGIN_COMMAND) {//GEN-END:|7-commandAction|7|35-preAction
+            if (command == LoginScreen.LOGIN_COMMAND) {//GEN-END:|7-commandAction|9|35-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getWaitScreen());//GEN-LINE:|7-commandAction|8|35-postAction
+                switchDisplayable(null, getWaitScreen());//GEN-LINE:|7-commandAction|10|35-postAction
                 // write post-action user code here
-            } else if (command == backCommand) {//GEN-LINE:|7-commandAction|9|38-preAction
+            } else if (command == backCommand) {//GEN-LINE:|7-commandAction|11|38-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|10|38-postAction
+                switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|12|38-postAction
                 // write post-action user code here
-            }//GEN-BEGIN:|7-commandAction|11|62-preAction
+            }//GEN-BEGIN:|7-commandAction|13|62-preAction
         } else if (displayable == mainForm) {
-            if (command == AboutCommand) {//GEN-END:|7-commandAction|11|62-preAction
+            if (command == AboutCommand) {//GEN-END:|7-commandAction|13|62-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getAbout());//GEN-LINE:|7-commandAction|12|62-postAction
+                switchDisplayable(null, getAbout());//GEN-LINE:|7-commandAction|14|62-postAction
                 // write post-action user code here
-            } else if (command == LoginCommand) {//GEN-LINE:|7-commandAction|13|23-preAction
+            } else if (command == LoginCommand) {//GEN-LINE:|7-commandAction|15|23-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getLoginScreen());//GEN-LINE:|7-commandAction|14|23-postAction
+                switchDisplayable(null, getLoginScreen());//GEN-LINE:|7-commandAction|16|23-postAction
                 // write post-action user code here
-            } else if (command == UpdateCommand) {//GEN-LINE:|7-commandAction|15|58-preAction
+            } else if (command == UpdateCommand) {//GEN-LINE:|7-commandAction|17|58-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getUpdateForm());//GEN-LINE:|7-commandAction|16|58-postAction
+                switchDisplayable(null, getUpdateForm());//GEN-LINE:|7-commandAction|18|58-postAction
                 // write post-action user code here
-            } else if (command == exitCommand) {//GEN-LINE:|7-commandAction|17|19-preAction
+            } else if (command == exitCommand) {//GEN-LINE:|7-commandAction|19|19-preAction
                 // write pre-action user code here
-                exitMIDlet();//GEN-LINE:|7-commandAction|18|19-postAction
+                exitMIDlet();//GEN-LINE:|7-commandAction|20|19-postAction
                 // write post-action user code here
-            }//GEN-BEGIN:|7-commandAction|19|30-preAction
+            }//GEN-BEGIN:|7-commandAction|21|84-preAction
+        } else if (displayable == saveIT_and_wait_screen) {
+            if (command == WaitScreen.FAILURE_COMMAND) {//GEN-END:|7-commandAction|21|84-preAction
+                // write pre-action user code here
+                switchDisplayable(null, getBookmarkProduct());//GEN-LINE:|7-commandAction|22|84-postAction
+                // write post-action user code here
+            } else if (command == WaitScreen.SUCCESS_COMMAND) {//GEN-LINE:|7-commandAction|23|83-preAction
+                // write pre-action user code here
+                switchDisplayable(null, getBookmarkProduct());//GEN-LINE:|7-commandAction|24|83-postAction
+                // write post-action user code here
+            }//GEN-BEGIN:|7-commandAction|25|30-preAction
         } else if (displayable == splashScreen) {
-            if (command == SplashScreen.DISMISS_COMMAND) {//GEN-END:|7-commandAction|19|30-preAction
+            if (command == SplashScreen.DISMISS_COMMAND) {//GEN-END:|7-commandAction|25|30-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|20|30-postAction
+                switchDisplayable(null, getMainForm());//GEN-LINE:|7-commandAction|26|30-postAction
                 // write post-action user code here
-            }//GEN-BEGIN:|7-commandAction|21|48-preAction
+            }//GEN-BEGIN:|7-commandAction|27|48-preAction
         } else if (displayable == waitScreen) {
-            if (command == WaitScreen.FAILURE_COMMAND) {//GEN-END:|7-commandAction|21|48-preAction
+            if (command == WaitScreen.FAILURE_COMMAND) {//GEN-END:|7-commandAction|27|48-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getLoginScreen());//GEN-LINE:|7-commandAction|22|48-postAction
+                switchDisplayable(null, getLoginScreen());//GEN-LINE:|7-commandAction|28|48-postAction
                 // write post-action user code here
-            } else if (command == WaitScreen.SUCCESS_COMMAND) {//GEN-LINE:|7-commandAction|23|47-preAction
+            } else if (command == WaitScreen.SUCCESS_COMMAND) {//GEN-LINE:|7-commandAction|29|47-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getLoginOK());//GEN-LINE:|7-commandAction|24|47-postAction
+                switchDisplayable(null, getBookmarkProduct());//GEN-LINE:|7-commandAction|30|47-postAction
                 // write post-action user code here
-            }//GEN-BEGIN:|7-commandAction|25|7-postCommandAction
-        }//GEN-END:|7-commandAction|25|7-postCommandAction
+            }//GEN-BEGIN:|7-commandAction|31|7-postCommandAction
+        }//GEN-END:|7-commandAction|31|7-postCommandAction
         // write post-action user code here
-    }//GEN-BEGIN:|7-commandAction|26|
-    //</editor-fold>//GEN-END:|7-commandAction|26|
+    }//GEN-BEGIN:|7-commandAction|32|
+    //</editor-fold>//GEN-END:|7-commandAction|32|
 
     //<editor-fold defaultstate="collapsed" desc=" Generated Getter: exitCommand ">//GEN-BEGIN:|18-getter|0|18-preInit
     /**
@@ -406,35 +423,36 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     }
     //</editor-fold>//GEN-END:|49-getter|3|
 
-    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: loginOK ">//GEN-BEGIN:|50-getter|0|50-preInit
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: BookmarkProduct ">//GEN-BEGIN:|50-getter|0|50-preInit
     /**
-     * Returns an initiliazed instance of loginOK component.
+     * Returns an initiliazed instance of BookmarkProduct component.
      * @return the initialized component instance
      */
-    public Form getLoginOK() {
-        if (loginOK == null) {//GEN-END:|50-getter|0|50-preInit
+    public Form getBookmarkProduct() {
+        if (BookmarkProduct == null) {//GEN-END:|50-getter|0|50-preInit
             // write pre-init user code here
-            loginOK = new Form("OpWoCo - Welcome", new Item[] { getTextField() });//GEN-BEGIN:|50-getter|1|50-postInit
-            loginOK.addCommand(getBackCommand3());
-            loginOK.setCommandListener(this);//GEN-END:|50-getter|1|50-postInit
+            BookmarkProduct = new Form("OpWoCo - Welcome", new Item[] { getTxtProductCode() });//GEN-BEGIN:|50-getter|1|50-postInit
+            BookmarkProduct.addCommand(getBackCommand3());
+            BookmarkProduct.addCommand(getOkCommand());
+            BookmarkProduct.setCommandListener(this);//GEN-END:|50-getter|1|50-postInit
             // write post-init user code here
         }//GEN-BEGIN:|50-getter|2|
-        return loginOK;
+        return BookmarkProduct;
     }
     //</editor-fold>//GEN-END:|50-getter|2|
 
-    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: textField ">//GEN-BEGIN:|53-getter|0|53-preInit
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: txtProductCode ">//GEN-BEGIN:|53-getter|0|53-preInit
     /**
-     * Returns an initiliazed instance of textField component.
+     * Returns an initiliazed instance of txtProductCode component.
      * @return the initialized component instance
      */
-    public TextField getTextField() {
-        if (textField == null) {//GEN-END:|53-getter|0|53-preInit
+    public TextField getTxtProductCode() {
+        if (txtProductCode == null) {//GEN-END:|53-getter|0|53-preInit
             // write pre-init user code here
-            textField = new TextField("Enter product code to bookmark", null, 32, TextField.ANY);//GEN-LINE:|53-getter|1|53-postInit
+            txtProductCode = new TextField("Enter product code to bookmark", null, 32, TextField.ANY);//GEN-LINE:|53-getter|1|53-postInit
             // write post-init user code here
         }//GEN-BEGIN:|53-getter|2|
-        return textField;
+        return txtProductCode;
     }
     //</editor-fold>//GEN-END:|53-getter|2|
 
@@ -599,6 +617,61 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     }
     //</editor-fold>//GEN-END:|77-getter|2|
 
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: okCommand ">//GEN-BEGIN:|80-getter|0|80-preInit
+    /**
+     * Returns an initiliazed instance of okCommand component.
+     * @return the initialized component instance
+     */
+    public Command getOkCommand() {
+        if (okCommand == null) {//GEN-END:|80-getter|0|80-preInit
+            // write pre-init user code here
+            okCommand = new Command("Ok", Command.OK, 0);//GEN-LINE:|80-getter|1|80-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|80-getter|2|
+        return okCommand;
+    }
+    //</editor-fold>//GEN-END:|80-getter|2|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: saveIT_and_wait_screen ">//GEN-BEGIN:|82-getter|0|82-preInit
+    /**
+     * Returns an initiliazed instance of saveIT_and_wait_screen component.
+     * @return the initialized component instance
+     */
+    public WaitScreen getSaveIT_and_wait_screen() {
+        if (saveIT_and_wait_screen == null) {//GEN-END:|82-getter|0|82-preInit
+            // write pre-init user code here
+            saveIT_and_wait_screen = new WaitScreen(getDisplay());//GEN-BEGIN:|82-getter|1|82-postInit
+            saveIT_and_wait_screen.setTitle("Saving product code");
+            saveIT_and_wait_screen.setCommandListener(this);
+            saveIT_and_wait_screen.setText("opwoco is saving the product code. You van find it at your personal account at www.opwoco.net");
+            saveIT_and_wait_screen.setTask(getTask1());//GEN-END:|82-getter|1|82-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|82-getter|2|
+        return saveIT_and_wait_screen;
+    }
+    //</editor-fold>//GEN-END:|82-getter|2|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: task1 ">//GEN-BEGIN:|85-getter|0|85-preInit
+    /**
+     * Returns an initiliazed instance of task1 component.
+     * @return the initialized component instance
+     */
+    public SimpleCancellableTask getTask1() {
+        if (task1 == null) {//GEN-END:|85-getter|0|85-preInit
+            // write pre-init user code here
+            task1 = new SimpleCancellableTask();//GEN-BEGIN:|85-getter|1|85-execute
+            task1.setExecutable(new org.netbeans.microedition.util.Executable() {
+                public void execute() throws Exception {//GEN-END:|85-getter|1|85-execute
+                    // write task-execution user code here
+                    BookmarkProductCode();
+                }//GEN-BEGIN:|85-getter|2|85-postInit
+            });//GEN-END:|85-getter|2|85-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|85-getter|3|
+        return task1;
+    }
+    //</editor-fold>//GEN-END:|85-getter|3|
+
 
 
 
@@ -652,7 +725,6 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     private void login() throws Exception {
         WebToMobileClient mySoap = new WebToMobileClient();
         //String myResult = mySoap.checkLogin(loginScreen.getUsername(), tools.MD5.toHex(loginScreen.getPassword().toString().getBytes()).toString() );
-        String tmp1 = loginScreen.getUsername();
          Boolean myLoginResult = mySoap.checkLogin(loginScreen.getUsername(), loginScreen.getPassword() );
        
         if( myLoginResult.booleanValue() )
@@ -675,5 +747,13 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     private void check4Update()
     {
         
+    }
+
+    private void BookmarkProductCode() throws Exception {
+        WebToMobileClient mySoap = new WebToMobileClient();
+        mySoap.bookmarkCode(txtProductCode.getString(), loginScreen.getUsername() );
+        saveIT_and_wait_screen.setText("Bookmarking of " + txtProductCode.getString() + " done.");
+        Thread.sleep(2*1000); // 1* for 1 second...
+        throw new Exception("niet gelukt");
     }
 }
