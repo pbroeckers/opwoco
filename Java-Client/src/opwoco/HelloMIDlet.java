@@ -18,6 +18,7 @@ package opwoco;
 
 import javax.microedition.midlet.*;
 import javax.microedition.lcdui.*;
+import opwoco_webservice.WebToMobileClient;
 import org.netbeans.microedition.lcdui.LoginScreen;
 import org.netbeans.microedition.lcdui.SimpleTableModel;
 import org.netbeans.microedition.lcdui.SplashScreen;
@@ -649,12 +650,12 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     
     
     private void login() throws Exception {
-        WebToMobileClient wtmc = new WebToMobileClient();
-        MySOAP_Client mySoap = new MySOAP_Client();
+        WebToMobileClient mySoap = new WebToMobileClient();
         //String myResult = mySoap.checkLogin(loginScreen.getUsername(), tools.MD5.toHex(loginScreen.getPassword().toString().getBytes()).toString() );
-         String myResult = mySoap.checkLogin(loginScreen.getUsername(), loginScreen.getPassword() );
+        String tmp1 = loginScreen.getUsername();
+         Boolean myLoginResult = mySoap.checkLogin(loginScreen.getUsername(), loginScreen.getPassword() );
        
-        if( myResult.compareTo("true") == 0 )
+        if( myLoginResult.booleanValue() )
         {
           return; // alles goed :)  
         }
