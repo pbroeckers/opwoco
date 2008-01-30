@@ -43,6 +43,18 @@ public class WebToMobileClient {
         this.serverURL = serverURL;
     }
     
+    public String bookmarkCode(String code, String userid) throws IOException {
+        Object params[] = new Object[] {
+            (String)code,
+            (String)userid
+        };
+        int paramIDs[] = new int[] {
+            5,
+            5
+        };
+        return (String)invokeServer(2, params, paramIDs);
+    }
+    
     public Boolean checkLogin(String username, String password) throws IOException {
         Object params[] = new Object[] {
             (String)username,
@@ -161,6 +173,10 @@ public class WebToMobileClient {
             case 3:
                 // Boolean
                 result = new Boolean(in.readBoolean());
+                return result;
+            case 5:
+                // String
+                result = in.readUTF();
                 return result;
             case -1: /* NULL */
                 return null;
