@@ -1,7 +1,17 @@
-//GEN-BEGIN:Client
-/**
- * This file is generated. Please do not change
- */
+/* opwoco - mobile java client for the opwoco.net service
+* Copyright (C) 2008  Christofer Wesseling, Chui Fong Mok
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public License
+* as published by the Free Software Foundation
+* applicable version is GPL version 2 only.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* You should have received a copy of the GNU General Public License
+* Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+*/
 
 import java.util.*;
 import java.io.*;
