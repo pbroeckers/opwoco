@@ -27,7 +27,7 @@ import org.netbeans.microedition.util.SimpleCancellableTask;
 /**
  * @author Christofer
  */
-public class HelloMIDlet extends MIDlet implements CommandListener {
+public class opwoco extends MIDlet implements CommandListener {
     private boolean midletPaused = false;
     private String theVersion = "0.3alpha";
 
@@ -71,9 +71,9 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     //</editor-fold>//GEN-END:|fields|0|
     
     /**
-     * The HelloMIDlet constructor.
+     * The opwoco constructor.
      */
-    public HelloMIDlet() {
+    public opwoco() {
     }
 
     //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|

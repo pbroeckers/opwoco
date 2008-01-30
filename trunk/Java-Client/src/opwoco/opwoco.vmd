@@ -392,11 +392,6 @@
                             <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R50"/>
                         </Component>
                     </Component>
-                    <Component componentID="109" typeID="Cjavax.microedition.lcdui.StringItem">
-                        <Property name="instanceName" typeID="Pjava.lang.String" value="VtxtProductDetails_Code"/>
-                        <Property name="label" typeID="Pjava.lang.String" value="VProductCode"/>
-                        <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R17"/>
-                    </Component>
                     <Component componentID="110" typeID="Cjavax.microedition.lcdui.StringItem">
                         <Property name="instanceName" typeID="Pjava.lang.String" value="VtxtProductDetails_Price"/>
                         <Property name="label" typeID="Pjava.lang.String" value="VPrice"/>
@@ -405,6 +400,11 @@
                     <Component componentID="111" typeID="Cjavax.microedition.lcdui.StringItem">
                         <Property name="instanceName" typeID="Pjava.lang.String" value="VtxtProductDetails_Distributor"/>
                         <Property name="label" typeID="Pjava.lang.String" value="VDistributor"/>
+                        <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R17"/>
+                    </Component>
+                    <Component componentID="109" typeID="Cjavax.microedition.lcdui.StringItem">
+                        <Property name="instanceName" typeID="Pjava.lang.String" value="VtxtProductDetails_Code"/>
+                        <Property name="label" typeID="Pjava.lang.String" value="VProductCode"/>
                         <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R17"/>
                     </Component>
                     <Component componentID="112" typeID="Cjavax.microedition.lcdui.StringItem">
@@ -436,16 +436,16 @@
         </Component>
     </Document>
     <FlowScene version="1">
-        <Node componentID="33" descriptorID="componentNode33" x="529" y="76"/>
-        <Node componentID="82" descriptorID="componentNode82" x="800" y="30"/>
-        <Node componentID="60" descriptorID="componentNode60" x="273" y="338"/>
-        <Node componentID="93" descriptorID="componentNode93" x="892" y="341"/>
-        <Node componentID="98" descriptorID="componentNode98" x="947" y="209"/>
-        <Node componentID="44" descriptorID="componentNode44" x="418" y="265"/>
         <Node componentID="14" descriptorID="componentNode14" x="135" y="167"/>
         <Node componentID="50" descriptorID="componentNode50" x="649" y="322"/>
+        <Node componentID="60" descriptorID="componentNode60" x="273" y="338"/>
+        <Node componentID="93" descriptorID="componentNode93" x="892" y="341"/>
+        <Node componentID="2" descriptorID="componentNode2" x="24" y="26"/>
+        <Node componentID="82" descriptorID="componentNode82" x="800" y="30"/>
+        <Node componentID="44" descriptorID="componentNode44" x="418" y="265"/>
+        <Node componentID="98" descriptorID="componentNode98" x="947" y="209"/>
         <Node componentID="28" descriptorID="componentNode28" x="316" y="54"/>
         <Node componentID="56" descriptorID="componentNode56" x="40" y="368"/>
-        <Node componentID="2" descriptorID="componentNode2" x="24" y="26"/>
+        <Node componentID="33" descriptorID="componentNode33" x="529" y="76"/>
     </FlowScene>
 </VisualDesign>
