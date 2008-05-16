@@ -4,8 +4,6 @@
 
 *Page "20 Cases"
 
-*Page "donate"
-
 *Page "Imprint"
 
 
